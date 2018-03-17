@@ -1,7 +1,7 @@
 # Two implementations of Soundex algorithm
 
 
-def soundexNaive(name, length=4):
+def soundexNaive(name, len=4):
     '''A naive implementation of the soundex algorithm.
        By Deepak Kumar, 2/12/2008. dkumar@brynmawr.edu
        Expects name to be in uppercase.
@@ -27,10 +27,10 @@ def soundexNaive(name, length=4):
         # Do not add if repeated/duplicated
         if d != sndx[-1]:
             sndx += d
-    return (sndx + (length * '0'))[:length]   # first 4 letters or padd with 0 to make 4
+    return (sndx + (len * '0'))[:len]   # first 4 letters or padd with 0 to make 4
 
 
-def soundex(name, length=4):
+def soundex(name, len=4):
     """ soundex module conforming to Donald Knuth's algorithm
         implementation 2000-12-24 by Gregory Jorgensen
         public domain.
@@ -54,10 +54,10 @@ def soundex(name, length=4):
             sndx += d
 
     # remove all 0s from the soundex code
-    # sndx = sndx.replace('0','')
+    #sndx = sndx.replace('0','')
 
     # return soundex code padded to len characters
-    return (sndx + (length * '0'))[:length]
+    return (sndx + (len * '0'))[:len]
 
 
 def main():
