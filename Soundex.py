@@ -54,7 +54,7 @@ def soundex(name, length=4):
             sndx += d
 
     # remove all 0s from the soundex code
-    sndx = sndx.replace('0','')
+    # sndx = sndx.replace('0','')
 
     # return soundex code padded to len characters
     return (sndx + (length * '0'))[:length]
