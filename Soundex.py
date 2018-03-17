@@ -8,7 +8,7 @@ def soundexNaive(name, len=4):
     '''
     sndx = name[0]  # Keep first letter
 
-    for i in name[1:]:
+    for i in name[1:len]:
         if i in "BFPV":
             d = "1"
         elif i in "CGJKQSXZ":
@@ -47,14 +47,14 @@ def soundex(name, len=4):
     sndx = name[0]
 
     # translate each successive letter in name
-    for c in name[1:]:
+    for c in name[1:len]:
         d = digits[ord(c)-ord('A')]
         # If 2 or more letters with same # are adjacent then just keep one
         if d != '0' and d != sndx[-1]:
             sndx += d
 
     # remove all 0s from the soundex code
-    #sndx = sndx.replace('0','')
+    sndx = sndx.replace('0','')
 
     # return soundex code padded to len characters
     return (sndx + (len * '0'))[:len]
