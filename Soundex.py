@@ -62,7 +62,6 @@ def soundex(name, len=4):
 
 def main():
     person = input("Enter your name: ")
-    # print("Length ", len(person))
     print("Algorithm 1 result for", person, soundexNaive(person.upper(), len(person)))
     print("Algorithm 2 result for", person, soundex(person.upper(), len(person)))
 

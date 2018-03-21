@@ -51,8 +51,8 @@ def metaphone(name):
 
 def main():
     person = input("Enter your name: ")
-    # print("Length ", len(person))
     print("Metaphone result for", person, metaphone(person))
 
 
-main()
+if __name__ == '__main__':
+    main()

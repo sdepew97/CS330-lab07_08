@@ -1,5 +1,5 @@
-f = open("FemaleNamesSortedMatchedSoundex.txt", "r")
-f2 = open("FemaleNamesSortedMatchedSoundexCompressed.txt", "w")
+f = open("FemaleNamesSortedMatchedMetaphone.txt", "r")
+f2 = open("FemaleNamesSortedMatchedMetaphoneCompressed.txt", "w")
 line1 = f.readline()
 line2 = f.readline()
 list1 = line1.split()
@@ -20,3 +20,5 @@ while line1:
     else:
         break
 
+f.close()
+f2.close()
